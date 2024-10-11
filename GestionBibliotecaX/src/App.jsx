@@ -1,19 +1,25 @@
-
-import './App.css'
-import { Caja } from './Componentes/caja'
-
-
+let num = 1;
 function App() {
+  ////Estado
+
+const sumar = ()=>{
+
+  num +=1;
+  console.log  
+
+
+}
+
+  //ciclo de vida
+  ///jsx
   return (
-    <>
       <div className="App">
-        <div className="contenedorCajas">
-          <Caja
-            imagen='harry.jpg'
-          />
+        <button onClick={}>+1</button>
+        <p>{num}</p>
+
         </div>
-      </div>
-    </>
+    
+  
   )
 }
 
