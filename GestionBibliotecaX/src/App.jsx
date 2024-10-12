@@ -1,11 +1,11 @@
-let num = 1;
+let num = 2;
 function App() {
   ////Estado
 
 const sumar = ()=>{
 
   num +=1;
-  console.log  
+  console.log(num); 
 
 
 }
@@ -14,7 +14,7 @@ const sumar = ()=>{
   ///jsx
   return (
       <div className="App">
-        <button onClick={}>+1</button>
+        <button onClick={sumar}>+1</button>
         <p>{num}</p>
 
         </div>
