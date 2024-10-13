@@ -31,7 +31,23 @@ function App() {
           <div className="scroll-down">⬇️ Desplázate hacia abajo</div>
         </div>
       </header>
+      {/* Sección de pestañas */}
+      <section className="collections">
+        <div className="tabs">
+          <button onClick={() => handleTabClick('overview')} className={activeTab === 'overview' ? 'active' : ''}>Resumen de Colecciones</button>
+          <button onClick={() => handleTabClick('himalaya')} className={activeTab === 'himalaya' ? 'active' : ''}>Colección del Himalaya</button>
+          <button onClick={() => handleTabClick('southAsia')} className={activeTab === 'southAsia' ? 'active' : ''}>Colección del Sur de Asia</button>
+          <button onClick={() => handleTabClick('eastAsia')} className={activeTab === 'eastAsia' ? 'active' : ''}>Colección del Este de Asia</button>
+        </div>
 
+        {/* Contenido de cada pestaña */}
+        <div className="tab-content">
+          {activeTab === 'overview' && <p>Resumen de nuestras colecciones...</p>}
+          {activeTab === 'himalaya' && <p>Colección de textos y manuscritos del Himalaya...</p>}
+          {activeTab === 'southAsia' && <p>Textos históricos y manuscritos del Sur de Asia...</p>}
+          {activeTab === 'eastAsia' && <p>Colección de documentos del Este de Asia...</p>}
+        </div>
+      </section>
      
     </div>
   );
