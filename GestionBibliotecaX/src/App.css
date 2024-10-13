@@ -1,0 +1,47 @@
+/* Estilos básicos */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .navbar li {
+    cursor: pointer;
+  }
+  
+  /* Header */
+  .header {
+    background-image: url('ruta-a-tu-imagen.jpg'); /* Cambia por la imagen que prefieras */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+  }
+  
+ 
