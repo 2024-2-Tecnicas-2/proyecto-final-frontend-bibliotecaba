@@ -1,88 +1,55 @@
-import { useState } from "react";
-import './App.css';  // Archivo CSS para estilos
+import React, { useState } from "react";
+import "./App.css"; // Asegúrate de crear y vincular el archivo CSS
+
+const libros = [
+  { id: 1, nombre: "Libro 1", genero: "Ficción" },
+  { id: 2, nombre: "Libro 2", genero: "Ciencia" },
+  { id: 3, nombre: "Libro 3", genero: "Historia" },
+  { id: 4, nombre: "Libro 4", genero: "Aventura" },
+  { id: 5, nombre: "Libro 5", genero: "Terror" },
+  { id: 6, nombre: "Libro 6", genero: "Romance" },
+];
 
 function App() {
-  const [activeSection, setActiveSection] = useState('home');
-
-  const handleNavClick = (section) => {
-    setActiveSection(section);
-  };
-
-  // Lista de libros
-  const bookList = [
-    { 
-      title: 'El Gran Gatsby', 
-      author: 'F. Scott Fitzgerald', 
-      imageUrl: 'https://via.placeholder.com/100x150.png?text=El+Gran+Gatsby' 
-    },
-    { 
-      title: 'Matar a un Ruiseñor', 
-      author: 'Harper Lee', 
-      imageUrl: 'https://via.placeholder.com/100x150.png?text=Matar+a+un+Ruiseñor' 
-    },
-    { 
-      title: '1984', 
-      author: 'George Orwell', 
-      imageUrl: 'https://via.placeholder.com/100x150.png?text=1984' 
-    },
-    { 
-      title: 'Orgullo y Prejuicio', 
-      author: 'Jane Austen', 
-      imageUrl: 'https://via.placeholder.com/100x150.png?text=Orgullo+y+Prejuicio' 
-    },
-    { 
-      title: 'Cien Años de Soledad', 
-      author: 'Gabriel García Márquez', 
-      imageUrl: 'https://via.placeholder.com/100x150.png?text=Cien+Años+de+Soledad' 
-    },
-    { 
-      title: 'Don Quijote de la Mancha', 
-      author: 'Miguel de Cervantes', 
-      imageUrl: 'https://via.placeholder.com/100x150.png?text=Don+Quijote' 
-    }
-  ];
+  const [mostrarBiblioteca, setMostrarBiblioteca] = useState(false);
+  const libroMasReciente = libros[libros.length - 1];
 
   return (
     <div className="App">
-      {/* Barra de navegación */}
-      <nav className="navbar">
-        <ul>
-          <li onClick={() => handleNavClick('home')}>Inicio</li>
-          <li onClick={() => handleNavClick('collections')}>Colecciones</li>
-          <li onClick={() => handleNavClick('about')}>Acerca de</li>
-          <li onClick={() => handleNavClick('library')}>Biblioteca</li>
-          <li onClick={() => handleNavClick('support')}>Soporte</li>
-          <li onClick={() => handleNavClick('news')}>Noticias</li>
-          <li>Español</li>
-        </ul>
-      </nav>
+      <header className="navbar">
+        <span className="nav-item" onClick={() => setMostrarBiblioteca(false)}>
+          Inicio
+        </span>
+        <span className="nav-item">Colecciones</span>
+        <span className="nav-item">Acerca de</span>
+        <span className="nav-item" onClick={() => setMostrarBiblioteca(true)}>
+          Biblioteca
+        </span>
+      </header>
 
-      {/* Sección de portada */}
-      {activeSection === 'home' && (
-        <header className="header">
-          <div className="overlay">
-            <h1>Bienvenido a la Librería</h1>
-            <p>Explora nuestras colecciones de textos históricos</p>
-            <div className="scroll-down">⬇️ Desplázate hacia abajo</div>
-          </div>
-        </header>
-      )}
-
-      {/* Sección de Biblioteca */}
-      {activeSection === 'library' && (
-        <section className="library">
-          <h2>Nuestra Biblioteca</h2>
-          <div className="book-list">
-            {bookList.map((book, index) => (
-              <div className="book" key={index}>
-                <img src={book.imageUrl} alt={book.title} />
-                <h3>{book.title}</h3>
-                <p>Autor: {book.author}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
+      <main>
+        {!mostrarBiblioteca ? (
+          <section className="libro-reciente">
+            <h2>Libros Recientes</h2>
+            <div className="libro-detalle">
+              <h3>{libroMasReciente.nombre}</h3>
+              <p>Género: {libroMasReciente.genero}</p>
+            </div>
+          </section>
+        ) : (
+          <section className="biblioteca">
+            <h2>Biblioteca</h2>
+            <div className="libros-grid">
+              {libros.map((libro) => (
+                <div key={libro.id} className="libro-card">
+                  <h3>{libro.nombre}</h3>
+                  <p>Género: {libro.genero}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+      </main>
     </div>
   );
 }
