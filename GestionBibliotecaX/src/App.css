@@ -1,61 +1,36 @@
-/* Estilos generales */
-.App {
-  font-family: Arial, sans-serif;
+/* Inicio.css */
+.inicio {
   padding: 20px;
+  background-color: #222;
+  color: white;
 }
 
-/* Navbar */
-.navbar {
-  display: flex;
-  gap: 20px;
-  padding: 10px 0;
-  background-color: #2c2f33;
-  color: #ffffff;
-  justify-content: center;
+.inicio h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 
-.nav-item {
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.nav-item:hover {
-  background-color: #7289da;
-}
-
-/* Sección de "Libros Recientes" */
 .libro-reciente {
-  text-align: center;
-  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 8px;
 }
 
-.libro-reciente .libro-detalle {
-  background-color: #1c1f24;
-  padding: 20px;
-  border-radius: 10px;
-  color: #ffffff;
-  max-width: 400px;
-  margin: 0 auto;
+.libro-reciente img {
+  width: 150px;
+  height: auto;
+  margin-right: 15px;
+  border-radius: 4px;
 }
 
-/* Biblioteca */
-.biblioteca {
-  margin-top: 20px;
+.info-libro {
+  display: flex;
+  flex-direction: column;
 }
 
-.libros-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.libro-card {
-  background-color: #1c1f24;
-  padding: 20px;
-  border-radius: 10px;
-  color: #ffffff;
-  text-align: center;
+.info-libro h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
 }
