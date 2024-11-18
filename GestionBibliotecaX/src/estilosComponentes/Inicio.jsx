@@ -28,33 +28,6 @@ const Inicio = () => {
         </div>
       ) : (
         <p>Cargando libro reciente...</p>
-
-
-      )}
-      <h1>Recomendados del mes</h1>
-      {libroReciente ? (
-        <div className="libro-reciente">
-          <img src={libroReciente.imagen} alt={libroReciente.nombre} className="libro-imagen" />
-          <div className="libro-info">
-            <h2>{libroReciente.nombre}</h2>
-            <p>Género: {libroReciente.genero}</p>
-          </div>
-        </div>
-      ) : (
-        <p>Cargando libros del mes...</p>
-      )}
-
-      <h1>Lo mas visto</h1>
-      {libroReciente ? (
-        <div className="libro-reciente">
-          <img src={libroReciente.imagen} alt={libroReciente.nombre} className="libro-imagen" />
-          <div className="libro-info">
-            <h2>{libroReciente.nombre}</h2>
-            <p>Género: {libroReciente.genero}</p>
-          </div>
-        </div>
-      ) : (
-        <p>Cargando libros mas vistos...</p>
       )}
     </div>
   );
