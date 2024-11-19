@@ -1,5 +1,7 @@
 //src/.estilosComponentes/Colecciones.jsx
 import React from 'react';
+import './Colecciones.css';
+
 
 function Colecciones() {
     return (
@@ -11,3 +13,4 @@ function Colecciones() {
 }
 
 export default Colecciones;
+
