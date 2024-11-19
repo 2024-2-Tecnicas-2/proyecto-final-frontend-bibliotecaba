@@ -1,7 +1,5 @@
-/ src/components/Inicio.jsx
 import React from 'react';
 import './Inicio.css';
-
 
 function Inicio() {
     const libroReciente = {
@@ -24,7 +22,8 @@ function Inicio() {
                     <p>Género: {libroReciente.genero}</p>
                 </div>
             </div>
-            </div>
+        </div>
     );
 }
- export default Inicio;
+
+export default Inicio;
