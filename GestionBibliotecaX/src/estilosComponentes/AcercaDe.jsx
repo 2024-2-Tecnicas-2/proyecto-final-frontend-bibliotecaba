@@ -1,7 +1,5 @@
 // src/estilosComponentes/AcercaDe.jsx
 import React from 'react';
-import './AcercaDe.css';
-
 // En Inicio.jsx
 
 
@@ -15,4 +13,3 @@ function AcercaDe() {
 }
 
 export default AcercaDe;
-
