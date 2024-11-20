@@ -1,21 +1,17 @@
-.biblioteca {
+/* src/estilosComponentes/Biblioteca.css */
+
+.biblioteca-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
     padding: 20px;
 }
 
-.biblioteca-grid {
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    padding: 10px;
-}
-
 .biblioteca-item {
-    flex: 0 0 auto;
-    width: 200px;
     background-color: #1a1a1a;
     color: #fff;
+    padding: 15px;
     border-radius: 8px;
-    overflow: hidden;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
@@ -25,17 +21,37 @@
     transform: scale(1.05);
 }
 
-.biblioteca-item img {
-    width: 100%;
-    height: auto;
-}
-
 .biblioteca-item h3 {
     font-size: 18px;
-    margin: 10px 0;
+    margin-bottom: 10px;
 }
 
 .biblioteca-item p {
     font-size: 14px;
     color: #ddd;
 }
+
+.btn {
+    margin: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    color: white;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border: none;
+    color: white;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border: none;
+    color: white;
+}
+

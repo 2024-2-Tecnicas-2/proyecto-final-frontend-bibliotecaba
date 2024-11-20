@@ -1,36 +1,9 @@
-/* Inicio.css */
-.inicio {
-  padding: 20px;
-  background-color: #222;
-  color: white;
-}
-
-.inicio h2 {
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.libro-reciente {
-  display: flex;
-  align-items: center;
-  background-color: #333;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.libro-reciente img {
-  width: 150px;
-  height: auto;
-  margin-right: 15px;
-  border-radius: 4px;
-}
-
-.info-libro {
-  display: flex;
-  flex-direction: column;
-}
-
-.info-libro h3 {
-  font-size: 20px;
-  margin-bottom: 5px;
+.footer{
+position :absolute; 
+bottom: 0; 
+width: 100%;
+height: 50px;
+background-color: black;
+text-align: center;
+color: white;
 }
