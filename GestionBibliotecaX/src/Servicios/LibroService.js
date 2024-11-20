@@ -7,11 +7,20 @@ class LibroService{
     getAllLibro(){
         return axios.get(USUARIO_BASE_REST_API_URL)
     }
-    getAllLibroaById(idLibro){
-        return axios.get(USUARIO_BASE_REST_API_URL+'/'+idLibro)
-        }
-    createLibro(libro,){
+    getLibroStock(stock){
+        return axios.get(USUARIO_BASE_REST_API_URL+'/stock/'+stock)
+    }
+    getLibroNombre(nombre){
+        return axios.get(USUARIO_BASE_REST_API_URL+'/libro/'+nombre)
+    }
+    createLibro(libro){
         return axios.post(USUARIO_BASE_REST_API_URL,libro)
+    }
+    updateLibro(idLibro){
+        return axios.put(USUARIO_BASE_REST_API_URL+'/'+idLibro)
+    }
+    deleteLibro(idLibro){
+        return axios.delete(USUARIO_BASE_REST_API_URL+'/'+idLibro)
     }
 }
     export default new  LibroService();
