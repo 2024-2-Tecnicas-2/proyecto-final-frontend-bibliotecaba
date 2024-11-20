@@ -1,15 +1,15 @@
 import './App.css';
 import FooterComponent from './estilosComponentes/FooterComponent';
 import { HeaderComponent } from './estilosComponentes/HeaderComponent';
-import ListaEstudiantes from './estilosComponentes/ListaEstudiantes';
+import ListaLibro from './estilosComponentes/ListaLibro';
 
 function App() {
     return (
         <div>
           <HeaderComponent/>
-          <ListaEstudiantes/>
+           <ListaLibro/>
             <FooterComponent/>
-        </div> 
+        </div>
     );
 }
 
