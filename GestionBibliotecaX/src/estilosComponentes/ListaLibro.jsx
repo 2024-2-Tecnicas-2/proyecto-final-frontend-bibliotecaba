@@ -29,7 +29,8 @@ useEffect(()  => {
                         <th>Nombre author</th>
                         <th>Fecha</th>
                         <th>Stock</th>
-
+                        <th></th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,9 +43,10 @@ useEffect(()  => {
                                 <td>{libros.autor}</td>
                                 <td>{libros.year}</td>
                                 <td>{libros.stock}</td>
-                                <th><button>eliminar</button></th>
-                                <th><button>editar </button></th>
-            
+                                <th><button style= {{ marginLeft: "10px"}} className="btn btn-danger" onClick={()=> deleteLibro(idLibro)}>eliminar</button></th>
+                                
+                                <th><button style= {{ marginLeft: "10px"}} className= "btn btn-danger" to={ `/edit-libro/${idlibro}`}>Actualizar</button></th>
+                                <th><button  style={{ marginLeft: "10px" }} className="btn btn-primary" to={`/edit-genero/${idGenero}`}> Actualizar </button></th>
                             </tr>
                         )
                     }
