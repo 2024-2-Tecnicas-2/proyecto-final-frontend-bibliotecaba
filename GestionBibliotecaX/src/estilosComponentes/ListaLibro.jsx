@@ -37,11 +37,13 @@ useEffect(()  => {
                         
                         libro.map(libros =>
                             <tr key={libros.id}>
-                                <td>{libros.id}</td>
+                                <td>{libros.idLibro}</td>
                                 <td>{libros.nombre}</td>
-                                <td>{libros.Author}</td>
+                                <td>{libros.autor}</td>
                                 <td>{libros.year}</td>
                                 <td>{libros.stock}</td>
+                                <th><button>eliminar</button></th>
+                                <th><button>editar </button></th>
             
                             </tr>
                         )
