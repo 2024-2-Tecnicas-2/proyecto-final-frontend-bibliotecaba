@@ -35,7 +35,7 @@ export const ListaGenero = () => {
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Nombre Género</th>
+                        <th>Nombre Genero</th>
                         <th>Genero</th>
                     </tr>
                 </thead>
