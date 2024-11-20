@@ -9,7 +9,6 @@ const AddEstudianteComponent = () => {
         e.preventDefault();
         const estudiante = { nombre, apellido, email };
         console.log(estudiante);
-       
     };
 
     return (
@@ -23,7 +22,7 @@ const AddEstudianteComponent = () => {
                                 <div className="form-group mb-3">
                                     <label className="form-label">Nombre</label>
                                     <input
-                                        type="text"
+                                        type=""
                                         placeholder="Digite su nombre"
                                         className="form-control"
                                         value={nombre}
@@ -33,7 +32,7 @@ const AddEstudianteComponent = () => {
                                 <div className="form-group mb-3">
                                     <label className="form-label">Apellido</label>
                                     <input
-                                        type="text"
+                                        type="Apellido"
                                         placeholder="Digite su apellido"
                                         className="form-control"
                                         value={apellido}
@@ -51,8 +50,7 @@ const AddEstudianteComponent = () => {
                                     />
                                 </div>
                                 <div className="text-center">
-                                    <button type="submit" className="btn btn-success">
-                                        Guardar
+                                    <button type="submit" className="btn btn-success"> Guardar
                                     </button>
                                 </div>
                             </form>

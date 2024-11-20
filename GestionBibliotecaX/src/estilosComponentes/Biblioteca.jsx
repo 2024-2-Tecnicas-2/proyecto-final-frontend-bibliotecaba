@@ -3,9 +3,9 @@ import './Biblioteca.css';
 
 function Biblioteca() {
     const libros = [
-        { id: 1, nombre: 'Libro 1', genero: 'Aventura' },
-        { id: 2, nombre: 'Libro 2', genero: 'Ciencia Ficción' },
-        // Más libros
+        { id: 1, autor: 'Libro.autor', genero: 'Aventura' },
+        { id: 2, autor: 'Libro.autor ', genero: 'Ciencia Ficción' },
+        
     ];
 
     return (
