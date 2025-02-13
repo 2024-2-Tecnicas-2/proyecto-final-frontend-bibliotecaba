@@ -1,10 +1,9 @@
-
 .navbar {
   background-color: #111;
   padding: 10px 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
@@ -41,4 +40,40 @@
 .nav-item:hover:before {
   transform: scaleX(1);
   transform-origin: bottom left;
+}
+
+/* Estilos para el carrito */
+.cart {
+  position: relative;
+  margin-left: 20px;
+  cursor: pointer;
+  color: white;
+  font-size: 22px;
+}
+
+.cart i {
+  transition: transform 0.3s;
+}
+
+.cart:hover i {
+  color: #e50914;
+  transform: scale(1.2);
+}
+
+/* Insignia del carrito */
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: #e50914;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
